@@ -3,6 +3,7 @@ Interactive Isospectral Explorer for Dirac Delta Potentials
 
 This tool allows interactive exploration of near-isospectral configurations
 between two-delta and three-delta quantum systems in 1D scattering.
+In the direction of paper, this tool could be used for desinging the 2-delta system.
 
 PHYSICS SETUP :
 - Natural units: ħ = 1, m = 1/2, so E = k²
