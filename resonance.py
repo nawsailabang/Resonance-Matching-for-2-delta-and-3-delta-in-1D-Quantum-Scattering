@@ -3,8 +3,15 @@ import matplotlib.pyplot as plt
 from scipy.optimize import differential_evolution
 import pandas as pd
 
+''' Input for 2-delta system can be found around line 474'''
+
 # ============================================================================
 # TRANSFER MATRIX FORMULATION
+'''PHYSICS SETUP :
+- Natural units: ħ = 1, m = 1/2, so E = k²
+- Transfer matrix for a single delta at x with strength α:
+  M = [[1 + iα/k, i(α/k)exp(-2ikx)],
+       [-i(α/k)exp(2ikx), 1 - iα/k]]'''
 # ============================================================================
 
 def transfer_matrix_single_delta(k, alpha, x):
@@ -460,7 +467,9 @@ if __name__ == "__main__":
     # ========================================================================
     
     # CONFIG ID - increment this manually each time you run with new parameters
-    CONFIG_ID = 4.5  # <-- CHANGE THIS for each new run (0, 1, 2, ...)
+    CONFIG_ID = 1.2  # <-- CHANGE THIS for each new run. For better conveneinace with result_analysis.py, change it accordingly. 
+                            # Example: For setup with |alpha| = 1 and 2 resonances within k<3, CONFIG ID = 1.2
+              
     
     alpha1_2d = 4
     alpha2_2d = -4
